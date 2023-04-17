@@ -55,8 +55,9 @@
               <li
                 class="contact displayFlex"
                 v-for="(contact, index) in contacts"
-                @click=" counter= index, displaySelectedChat()">  
-
+                @click=" counter= index, displaySelectedChat()"
+                :class="{selected : counter === index}">  
+               
                 <img :src="contact.avatar" alt="">
 
                 <div class="contactInfo">

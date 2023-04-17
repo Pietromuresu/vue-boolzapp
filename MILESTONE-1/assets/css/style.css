@@ -55,6 +55,10 @@ i{
   display: flex;
 }
 
+.selected{
+  background-color: #EAE9EA;
+}
+
 /* Main container */
 .mainContainer {
   margin: 25px auto;
