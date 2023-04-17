@@ -17,14 +17,14 @@
 
   <div  id="app">
 
-    <div class="mainContainer">
+    <div class="mainContainer displayFlex">
       
       <!-- Contacts container -->
       <div class="contactsContainer">
 
         <!-- user avatar -->
-          <div class="mineCard card">
-            <div class="nameImgContainer">
+          <div class="mineCard card displayFlex">
+            <div class="nameImgContainer displayFlex">
               <img src="assets/img/avatar_io.jpg" alt="Your photo">
               <span>Sofia</span>
             </div>
@@ -35,8 +35,8 @@
             </div>
           </div>
           
-          <div class="alertNotification">
-            <div class="bellFont">
+          <div class="alertNotification displayFlex">
+            <div class="bellFont displayFlex">
               <i class="fa-solid fa-bell-slash"></i>
             </div>
             <div class="alertNotificationText">
@@ -45,7 +45,7 @@
             </div>
           </div>
 
-          <div class="searchBar">
+          <div class="searchBar displayFlex">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="Cerca o inizia una nuova chat">
           </div>
@@ -53,7 +53,7 @@
           <div class="recentChats">
             <ul>
               <li
-                class="contact"
+                class="contact displayFlex"
                 v-for="(contact, index) in contacts"
                 @click=" counter= index, displaySelectedChat()">  
 
@@ -76,8 +76,8 @@
 <!-- current chat -->
       <div class="chatContainer ">
 
-        <div class="currentContact ">
-            <div class="currentContactInfo">
+        <div class="currentContact displayFlex">
+            <div class="currentContactInfo displayFlex">
               <img :src="contacts[counter].avatar" alt="user image">
               
               <div  class="currentContactName">
@@ -108,8 +108,12 @@
           </ul>
         </div>
 
-        <div class="typingBar ">
-
+        <div class="typingBar displayFlex">
+          
+            <i class="fa-regular fa-face-smile"></i>
+            <input type="text" placeholder="Scrivi un messaggio">
+            <i class="fa-solid fa-microphone"></i>
+         
         </div>
       </div>
 

@@ -51,10 +51,12 @@ i{
   display: none;
 }
 
+.displayFlex{
+  display: flex;
+}
 
 /* Main container */
 .mainContainer {
-  display: flex;
   margin: 25px auto;
   width: 80%;
   height: 90vh;
@@ -71,7 +73,6 @@ i{
 }
 
 .mineCard {
-  display: flex;
   justify-content: space-between;
 }
 
@@ -80,19 +81,16 @@ i{
 }
 
 .nameImgContainer{
-  display: flex;
   align-items: center;
 }
 
 /* activate notification alert */
 .alertNotification{
-  display: flex;
   background: #8EDAFC;
   padding: 15px 0;
 }
 
 .bellFont {
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 40px;
@@ -109,7 +107,6 @@ i{
 
 /* searchbar */
 .searchBar{
-  display: flex;
   margin: 5px;
   background-color: #fff;
   border: 1px solid #c8c5c5;
@@ -140,7 +137,6 @@ i{
 
 .contact{
   position: relative;
-  display: flex;
   align-items: center;
 
   border-top:1px solid #F6F6F6 ;
@@ -223,16 +219,36 @@ width: 100%;
 
 .currentContact{
   top: 0;
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .currentContactInfo{
-display: flex;
 align-items: center;
 }
 
 .typingBar{
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
   bottom: 0;
+}
+
+.typingBar i{
+  width: 10%;
+  font-size: 25px;
+  margin-right: 0;
+  padding-right: 0;
+  
+}
+
+
+.typingBar input{
+  width: 80%;
+  height: 50px;
+  border-radius: 5px;
+  border: 0;
+  padding-left: 10px;
 }
