@@ -19,8 +19,10 @@
 
     <div class="mainContainer">
       
+      <!-- Contacts container -->
       <div class="contactsContainer">
 
+        <!-- user avatar -->
           <div class="mineCard card">
             <div class="nameImgContainer">
               <img src="assets/img/avatar_io.jpg" alt="Your photo">
@@ -32,14 +34,14 @@
               <i class="fa-solid fa-ellipsis-vertical"></i>
             </div>
           </div>
-
+          
           <div class="alertNotification">
             <div class="bellFont">
               <i class="fa-solid fa-bell-slash"></i>
             </div>
             <div class="alertNotificationText">
               <p>Ricevi notifiche di nuovi messaggi</p>
-              <a href="#">Attiva notifiche desktop</a>
+              <a class="subText" href="#">Attiva notifiche desktop</a>
             </div>
           </div>
 
@@ -47,22 +49,68 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="Cerca o inizia una nuova chat">
           </div>
-
+            <!-- Recent chats -->
           <div class="recentChats">
             <ul>
-              <li class="contact" v-for="contact in contacts">
+              <li
+                class="contact"
+                v-for="(contact, index) in contacts"
+                @click=" counter= index, displaySelectedChat()">  
+
                 <img :src="contact.avatar" alt="">
+
                 <div class="contactInfo">
+
                   <h4>{{contact.name}}</h4>
-                  <p> ultimo messaggio </p>
+                  <p class="subText"> Ultimo messaggio </p>
+
+                  <div class="subText lastMsgHour">
+                    12:00
+                  </div>
+
                 </div>
               </li>
             </ul>
           </div>
       </div>
-
+<!-- current chat -->
       <div class="chatContainer ">
 
+        <div class="currentContact ">
+            <div class="currentContactInfo">
+              <img :src="contacts[counter].avatar" alt="user image">
+              
+              <div  class="currentContactName">
+                <span>{{contacts[counter].name}}</span>
+                <p class="subText">Ultimo accesso oggi alle 12:00</p>
+              </div>
+
+            </div>
+
+            <div class="buttons">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+
+        <div v-for="(contact, index) in contacts"
+            :class="{displayNone : index !== counter}" class="chat">
+          <ul>
+            <li
+              v-for="text in contact.messages"
+              :class="text.status">
+              {{text.message}}
+              <div class="lastMsgHour">
+                {{text.date}}
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="typingBar ">
+
+        </div>
       </div>
 
 

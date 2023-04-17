@@ -7,6 +7,7 @@ export default {
         name: 'Michele',
         avatar: 'assets/img/avatar_1.jpg',
         visible: true,
+        selected: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -29,6 +30,7 @@ export default {
         name: 'Fabio',
         avatar: 'assets/img/avatar_2.jpg',
         visible: true,
+        selected: false,
         messages: [
             {
                 date: '20/03/2020 16:30:00',
@@ -51,6 +53,7 @@ export default {
         name: 'Samuele',
         avatar: 'assets/img/avatar_3.jpg',
         visible: true,
+        selected: false,
         messages: [
             {
                 date: '28/03/2020 10:10:40',
@@ -73,6 +76,7 @@ export default {
         name: 'Alessandro B.',
         avatar: 'assets/img/avatar_4.jpg',
         visible: true,
+        selected: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -90,6 +94,7 @@ export default {
         name: 'Alessandro L.',
         avatar: 'assets/img/avatar_5.jpg',
         visible: true,
+        selected: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -107,6 +112,7 @@ export default {
         name: 'Claudia',
         avatar: 'assets/img/avatar_6.jpg',
         visible: true,
+        selected: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -129,6 +135,7 @@ export default {
         name: 'Federico',
         avatar: 'assets/img/avatar_7.jpg',
         visible: true,
+        selected: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -146,6 +153,7 @@ export default {
         name: 'Davide',
         avatar: 'assets/img/avatar_8.jpg',
         visible: true,
+        selected: false,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -154,7 +162,7 @@ export default {
             },
             {
                 date: '10/01/2020 15:50:00',
-                message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                message:" No, l'ho già mangiata ieri, ordiniamo sushi!",
                 status: 'sent'
             },
             {
@@ -164,7 +172,13 @@ export default {
             }
         ],
     }
-]
+],
+counter: 0,
+selectedChat: {
+  name: "",
+  avatar:""
+}
+
   }
 
 
