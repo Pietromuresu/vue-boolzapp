@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #009688;
+  background-image: linear-gradient( 180deg, #009688 20%, #D7DBD4 20%);
 }
 
 .debug {
@@ -9,11 +19,22 @@
   border: 0.5px solid white;
 }
 
-body {
-  overflow: hidden;
-  height: 100vh;
-  background-color: #009688;
-  background-image: linear-gradient( 180deg, #009688 20%, #D7DBD4 20%);
+.card {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+
+img {
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+i{
+  font-size: 20px;
+  margin-right: 15px;
+  color: #B1B1B1;
 }
 
 .mainContainer {
@@ -29,6 +50,7 @@ body {
   width: 35%;
   height: 100%;
   background-color: #EAEAEA;
+  overflow: hidden;
 }
 
 .chatContainer {
@@ -37,3 +59,86 @@ body {
   background-image: url(../img/mine.jpg);
   background-size:70%;
 }
+
+.mineCard {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mineCard img{
+  height: 40px;
+}
+
+.nameImgContainer{
+  display: flex;
+  align-items: center;
+}
+
+.alertNotification{
+  display: flex;
+  background: #8EDAFC;
+  padding: 10px 0;
+}
+
+.alertNotification p{
+  font-size: 13px;
+}
+
+.alertNotification a {
+  font-size: 12px;
+  color: #757474;
+}
+
+.bellFont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin: 0 15px;
+  background-color: #fff;
+}
+
+.bellFont i{
+  margin-right: 0;
+}
+
+.searchBar{
+  display: flex;
+  margin: 5px;
+  background-color: #fff;
+  border: 1px solid #c8c5c5;
+}
+
+.searchBar i{
+  width: 15%;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 0;
+  font-size: 15px;
+  border-right: 1px solid #c8c5c5;
+}
+
+.searchBar input{
+  line-height: 30px;
+  width: 85%;
+  padding-left: 10px ;
+  border: 0;
+}
+
+.recentChats{
+  height: calc(100% - 150px);
+  overflow: auto;
+
+}
+
+.contact{
+  display: flex;
+}
+
+li.contact{
+  list-style: none;
+  height: 80px;
+}
+
