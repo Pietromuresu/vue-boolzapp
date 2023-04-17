@@ -3,3 +3,37 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.debug {
+  background: #32292978;
+  border: 0.5px solid white;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+  background-color: #009688;
+  background-image: linear-gradient( 180deg, #009688 20%, #D7DBD4 20%);
+}
+
+.mainContainer {
+  display: flex;
+  margin:25px auto;
+  width: 80%;
+  height: 90vh;
+  box-shadow: 0 0 2px grey;
+
+}
+
+.contactsContainer {
+  width: 35%;
+  height: 100%;
+  background-color: #EAEAEA;
+}
+
+.chatContainer {
+  height: 100%;
+  width: 65%;
+  background-image: url(../img/mine.jpg);
+  background-size:70%;
+}
