@@ -6,6 +6,11 @@ createApp({
   data(){
     return contacts
     
-  }
+  },
+  methods: {
+    displaySelectedChat(){
 
+      console.log(this.counter);
+    }
+  }
 }).mount("#app")

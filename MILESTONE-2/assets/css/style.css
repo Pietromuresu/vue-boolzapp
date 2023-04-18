@@ -179,6 +179,36 @@ li.contact{
   overflow: auto;
 }
 
+/* messages style  */
+.sent, 
+.received{
+  position: relative;
+  list-style: none;
+  text-align: start;
+  width:320px;
+  line-height: 30px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sent{
+ margin-left: calc(100% - 400px);
+ background-color: #D5F9BA; 
+ margin-top: 10px;
+}
+
+.received{
+ background-color: #ffff; 
+ margin-left: 80px;
+ margin-top: 10px;
+}
+
+.chat ul li .lastMsgHour{
+  position: absolute;
+  top: calc(100% - 25px);
+  right: 5px;
+  font-size: 10px;
+}
 
 /* current contact bar */
 
@@ -209,9 +239,6 @@ align-items: center;
   width: 100%;
   margin: 0 auto;
   bottom: 0;
-
-  /* debug */
-  margin-top: calc(100% - 80px);
 }
 
 .typingBar i{

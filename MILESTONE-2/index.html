@@ -79,11 +79,11 @@
 
         <div class="currentContact displayFlex">
             <div class="currentContactInfo displayFlex">
-              <img src="" alt="user image">
+              <img :src="contacts[counter].avatar" alt="user image">
               
               <div  class="currentContactName">
-                <span></span>
-                <p class="subText"></p>
+                <span>{{contacts[counter].name}}</span>
+                <p class="subText">Ultimo accesso oggi alle 12:00</p>
               </div>
 
             </div>
@@ -95,6 +95,19 @@
             </div>
         </div>
 
+        <div v-for="(contact, index) in contacts"
+            :class="{displayNone : index !== counter}" class="chat">
+          <ul>
+            <li
+              v-for="text in contact.messages"
+              :class="text.status">
+              {{text.message}}
+              <div class="lastMsgHour">
+                {{text.date}}
+              </div>
+            </li>
+          </ul>
+        </div>
 
         <div class="typingBar displayFlex">
           
