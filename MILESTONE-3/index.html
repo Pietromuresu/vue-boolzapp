@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- luxon -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js" integrity="sha512-KKbQg5o92MwtJKR9sfm/HkREzfyzNMiKPIQ7i7SZOxwEdiNCm4Svayn2DBq7MKEdrqPJUOSIpy1v6PpFlCQ0YA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <title>Boolzapp</title>
+</head>
+<body>
+  
+<main>
+
+  <div  id="app">
+
+    <div class="mainContainer displayFlex">
+      
+      <!-- Contacts container -->
+      <div class="contactsContainer">
+
+        <!-- user avatar -->
+          <div class="mineCard card displayFlex">
+            <div class="nameImgContainer displayFlex">
+              <img src="assets/img/avatar_io.jpg" alt="Your photo">
+              <span>Sofia</span>
+            </div>
+            <div class="buttons">
+              <i class="fa-sharp fa-solid fa-circle-notch"></i>
+              <i class="fa-solid fa-message"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+          </div>
+          
+          <div class="alertNotification displayFlex">
+            <div class="bellFont displayFlex">
+              <i class="fa-solid fa-bell-slash"></i>
+            </div>
+            <div class="alertNotificationText">
+              <p>Ricevi notifiche di nuovi messaggi</p>
+              <a class="subText" href="#">Attiva notifiche desktop</a>
+            </div>
+          </div>
+
+          <div class="searchBar displayFlex">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Cerca o inizia una nuova chat">
+          </div>
+            <!-- Recent chats -->
+          <div class="recentChats">
+            <ul>
+              <li
+                class="contact displayFlex"
+                v-for="(contact, index) in contacts"
+                @click=" counter= index, displaySelectedChat()"
+                :class="{selected : counter === index}">  
+               
+                <img :src="contact.avatar" alt="">
+
+                <div class="contactInfo">
+
+                  <h4>{{contact.name}}</h4>
+                  <p class="subText"> Ultimo messaggio </p>
+
+                  <div class="subText lastMsgHour">
+                    12:00
+                  </div>
+
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+<!-- current chat -->
+      <div 
+      v-for="(contact, index) in contacts"
+      :class="{displayNone : index !== counter}"
+      class="chatContainer ">
+
+        <div class="currentContact displayFlex">
+            <div class="currentContactInfo displayFlex">
+              <img :src="contacts[counter].avatar" alt="user image">
+              
+              <div  class="currentContactName">
+                <span>{{contacts[counter].name}}</span>
+                <p class="subText">Ultimo accesso oggi alle 12:00</p>
+              </div>
+
+            </div>
+
+            <div class="buttons">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <i class="fa-solid fa-paperclip"></i>
+              <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+        </div>
+
+        <div 
+             class="chat">
+          <ul>
+            <li
+              v-for="text in contact.messages"
+              :class="text.status">
+              {{text.message}}
+              <div class="lastMsgHour">
+                {{text.date}}
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="typingBar displayFlex">
+          
+            <i class="fa-regular fa-face-smile"></i>
+            <input
+              v-model="newText"
+              @keyup.enter="addNewMessage(contact)"
+              type="text"
+              placeholder="Scrivi un messaggio">
+            <i class="fa-solid fa-microphone"></i>
+         
+        </div>
+      </div>
+
+
+    </div>
+    
+  </div>
+</main>
+
+
+
+
+  <script type="module" src="assets/scripts/scripts.js"></script>
+
+
+</body>
+</html>
