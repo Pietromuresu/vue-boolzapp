@@ -211,7 +211,7 @@ align-items: center;
   bottom: 0;
 
   /* debug */
-  margin-top: calc(100% - 80px);
+  margin-top: calc(100% - 145px);
 }
 
 .typingBar i{
