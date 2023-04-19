@@ -216,7 +216,8 @@ ansewrs: [
     'Va bene',
     
 ],
-sound: { soundurl : 'assets/Sound/WhatsApp-Message-Received-Sound.mp3'} 
+sound: { receivedMsg : 'assets/Sound/WhatsApp-Message-Received-Sound.mp3', 
+sentMsg : 'assets/Sound/WhatsApp-Sending-Message.mp3'} 
 
   }
 

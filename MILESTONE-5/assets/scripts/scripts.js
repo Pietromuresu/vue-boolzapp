@@ -26,7 +26,7 @@ createApp({
       
       contact.messages.push(reply)
       
-      const audio = new Audio(this.sound.soundurl);
+      const audio = new Audio(this.sound.receivedMsg);
       audio.play(audio);
       
     },
@@ -40,6 +40,8 @@ createApp({
 
       this.newText=""
       contact.messages.push(newMsg)
+      const audio = new Audio(this.sound.sentMsg);
+      audio.play(audio);
 
       setTimeout(() =>{
       this.answer(contact)
