@@ -20,7 +20,7 @@
 ## Milestone 5 - opzionale
 - Cancella messaggio: cliccando sul messaggio appare un menu a tendina che permette di cancellare il messaggio selezionato
 
-<img src="img/Schermata%202023-04-17%20alle%2010.26.34.png" height="180"> <br>
+<img src="MILESTONE-1/assets/img/Schermata 2023-04-17 alle 10.26.34.png" height="180"> <br>
 - Visualizzazione ora e ultimo messaggio inviato/ricevuto nella lista dei contatti 
 
 ### Consigli utili:
