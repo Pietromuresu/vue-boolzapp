@@ -265,7 +265,7 @@ li.contact{
 
 }
 
-.chat ul li .dropdown .dropdownMenu{
+.chat ul li .dropdown:hover .dropdownMenu{
 display: block;
 }
 
