@@ -49,9 +49,14 @@ createApp({
     },
 
     removeMsg(text, index, messages){
-      if(text.delete){
-        messages.splice(index, 1)
+     const deleteMsgSound = new Audio(this.sound.deleteMsgSound) 
+     if(text.delete){
+       deleteMsgSound.play(deleteMsgSound)
+       messages.splice(index, 1)
+          
       }
+
+   
     },
 
     getLastMsg(contact){
