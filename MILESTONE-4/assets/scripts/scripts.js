@@ -10,7 +10,7 @@ createApp({
   },
   methods: {
     
-    answer(contact){
+    answer(contact){  
       const reply = {
         date:dt.now().setLocale('it').toLocaleString(dt.TIME_WITH_SECONDS),
         message:"ciao a te",
@@ -33,10 +33,18 @@ createApp({
       setTimeout(() =>{
       this.answer(contact)
       }, 2000) 
+    }
+
+  },
+  
+  computed:{
+    findSearchedName(){
+         return this.contacts.filter(contact =>{
+          return contact.name.toUpperCase().match(this.searchedName.toUpperCase())
+         })
     },
 
   }
-
 
 
 

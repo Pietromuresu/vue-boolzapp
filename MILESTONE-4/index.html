@@ -50,15 +50,18 @@
 
           <div class="searchBar displayFlex">
             <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Cerca o inizia una nuova chat">
+            <input
+              v-model="searchedName"
+              type="text"
+              placeholder="Cerca o inizia una nuova chat">
           </div>
             <!-- Recent chats -->
           <div class="recentChats">
             <ul>
               <li
                 class="contact displayFlex"
-                v-for="(contact, index) in contacts"
-                @click=" counter= index"
+                v-for="(contact, index) in findSearchedName"
+                @click=" counter = contact.index"
                 :class="{selected : counter === index}">  
                
                 <img :src="contact.avatar" alt="">
