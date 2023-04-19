@@ -1,6 +1,7 @@
 const {createApp} = Vue;
 const dt = luxon.DateTime
-import contacts from "./db.js"
+import contacts from "./db.js";
+
 
 
 createApp({
@@ -22,8 +23,12 @@ createApp({
         message:this.getAnswer(this.ansewrs.length - 1, 0),
         status: "received"
       }
-
+      
       contact.messages.push(reply)
+      
+      const audio = new Audio(this.sound.soundurl);
+      audio.play(audio);
+      
     },
 
     addNewMessage(contact){

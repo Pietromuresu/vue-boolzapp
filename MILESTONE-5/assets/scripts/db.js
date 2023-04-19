@@ -197,7 +197,6 @@ export default {
 counter: 0,
 newText: '',
 searchedName: '',
-
 ansewrs: [
     'ciao a te',
     'come stai?',
@@ -216,7 +215,9 @@ ansewrs: [
     'ok perfetto',
     'Va bene',
     
-]
+],
+sound: { soundurl : 'assets/Sound/WhatsApp-Message-Received-Sound.mp3'} 
+
   }
 
 
