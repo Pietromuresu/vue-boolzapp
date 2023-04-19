@@ -9,11 +9,17 @@ createApp({
     
   },
   methods: {
+
+    getAnswer(max, min){
+
+      const randomAnswer = this.ansewrs[Math.floor(Math.random() * (max - min + 1) - 1)]
+      return randomAnswer
+    },
     
     answer(contact){  
       const reply = {
         date:dt.now().setLocale('it').toLocaleString(dt.TIME_WITH_SECONDS),
-        message:"ciao a te",
+        message:this.getAnswer(this.ansewrs.length - 1, 0),
         status: "received"
       }
 

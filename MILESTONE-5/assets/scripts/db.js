@@ -196,7 +196,27 @@ export default {
 ],
 counter: 0,
 newText: '',
-searchedName: ''
+searchedName: '',
+
+ansewrs: [
+    'ciao a te',
+    'come stai?',
+    "non c'è male e tu?",
+    'perfetto allora ci sentiamo più tardi',
+    'oggi sono stanca',
+    'non volevo disturbare',
+    'non ho voglia di parlare',
+    'domani andiamo a prendere un gelato?',
+    'oggi non sono proprio in vena',
+    'quando andiamo a Livorno?',
+    'Ciao! Senti, ma quella questione è sistemata?',
+    "E' un film bellissimo dobbiamo vederlo",
+    'Oggi ho studiato tantissimo',
+    'Come mai non riusciamo a vederci domani?',
+    'ok perfetto',
+    'Va bene',
+    
+]
   }
 
 
