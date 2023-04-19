@@ -69,10 +69,14 @@
                 <div class="contactInfo">
 
                   <h4>{{contact.name}}</h4>
-                  <p class="subText"> Ultimo messaggio </p>
+                  <div
+                    
+                    class="lastMsg">
+                    <p class="subText">{{ getLastMsg(contact)}} </p>
+                  </div>
 
                   <div class="subText lastMsgHour">
-                    12:00
+                   {{ getLastMsgHour(contact)}}
                   </div>
 
                 </div>

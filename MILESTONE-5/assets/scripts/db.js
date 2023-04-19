@@ -8,7 +8,6 @@ export default {
         avatar: 'assets/img/avatar_1.jpg',
         visible: false,
         index: 0,
-        lastMsg: null,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -35,7 +34,6 @@ export default {
         avatar: 'assets/img/avatar_2.jpg',
         visible: false,
         index: 1,
-        lastMsg: null,
         messages: [
             {
                 date: '20/03/2020 16:30:00',
@@ -62,7 +60,6 @@ export default {
         avatar: 'assets/img/avatar_3.jpg',
         visible: true,
         index: 2,
-        lastMsg: null,
         messages: [
             {
                 date: '28/03/2020 10:10:40',
@@ -89,7 +86,6 @@ export default {
         avatar: 'assets/img/avatar_4.jpg',
         visible: true,
         index: 3,
-        lastMsg: null,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -110,7 +106,6 @@ export default {
         avatar: 'assets/img/avatar_5.jpg',
         visible: true,
         index: 4,
-        lastMsg: null,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -131,7 +126,6 @@ export default {
         avatar: 'assets/img/avatar_6.jpg',
         visible: true,
         index: 5,
-        lastMsg: null,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -158,7 +152,6 @@ export default {
         avatar: 'assets/img/avatar_7.jpg',
         visible: true,
         index: 6,
-        lastMsg: null,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
@@ -179,7 +172,6 @@ export default {
         avatar: 'assets/img/avatar_8.jpg',
         visible: true,
         index: 7,
-        lastMsg: null,
         messages: [
             {
                 date: '10/01/2020 15:30:55',

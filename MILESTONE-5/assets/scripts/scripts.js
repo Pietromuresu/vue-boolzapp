@@ -39,8 +39,23 @@ createApp({
       if(text.delete){
         messages.splice(index, 1)
       }
+    },
 
-    }
+    getLastMsg(contact){
+      if(contact.messages[contact.messages.length - 1].status == 'received'){
+        return `${contact.name}: ${contact.messages[contact.messages.length - 1].message}` 
+
+      }else {
+        return `Tu: ${contact.messages[contact.messages.length - 1].message}` 
+      }
+
+  },
+
+    getLastMsgHour(contact){
+  
+      return contact.messages[contact.messages.length - 1].date
+
+  }
 
   },
   
@@ -49,7 +64,9 @@ createApp({
          return this.contacts.filter(contact =>{
           return contact.name.toUpperCase().match(this.searchedName.toUpperCase())  
          })
-    }
+    },
+
+
   }
 
 

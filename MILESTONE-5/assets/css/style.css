@@ -89,6 +89,21 @@ i{
   align-items: center;
 }
 
+.lastMsg .subText{
+  line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 200px;
+  white-space: nowrap;
+}
+
+.contactInfo .lastMsgHour {
+  width: 70px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
 /* activate notification alert */
 .alertNotification{
   background: #8EDAFC;
