@@ -246,8 +246,10 @@ li.contact{
   padding-top: 5px;
   z-index: 1;
   background-color: #fff;
+  border: 1px solid #d6d5d5;
     
 }
+
 
 .dd-Item{
   padding-left: 5px;
@@ -259,13 +261,12 @@ li.contact{
 }
 
 .chat ul li:hover .dropdown{
-
-     display: block;
+       display: block;
 
 }
 
-.chat ul li .dropdown:hover .dropdownMenu{
-  display: block;
+.chat ul li .dropdown .dropdownMenu{
+display: block;
 }
 
 
@@ -316,4 +317,23 @@ align-items: center;
   border-radius: 5px;
   border: 0;
   padding-left: 10px;
+}
+
+
+.dropdownMenu{
+   animation: dropdownAnimation 300ms ease-in-out
+  
+}
+   
+
+@keyframes dropdownAnimation {
+     0% {
+        transform: rotateX(90deg)
+    }
+    80% {
+        transform: rotateX(-10deg)
+    }
+    100% {
+        transform: rotateX(0)
+    }
 }

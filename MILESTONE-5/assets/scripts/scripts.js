@@ -20,7 +20,7 @@ createApp({
     answer(contact){  
       const reply = {
         date:dt.now().setLocale('it').toLocaleString(dt.TIME_WITH_SECONDS),
-        message:this.getAnswer(this.ansewrs.length - 1, 0),
+        message:this.getAnswer(this.ansewrs.length - 1, 1),
         status: "received"
       }
       
