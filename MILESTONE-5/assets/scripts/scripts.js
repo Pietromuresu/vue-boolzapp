@@ -33,6 +33,13 @@ createApp({
       setTimeout(() =>{
       this.answer(contact)
       }, 2000) 
+    },
+
+    removeMsg(text, index, messages){
+      if(text.delete){
+        messages.splice(index, 1)
+      }
+
     }
 
   },
@@ -40,10 +47,9 @@ createApp({
   computed:{
     findSearchedName(){
          return this.contacts.filter(contact =>{
-          return contact.name.toUpperCase().match(this.searchedName.toUpperCase())
+          return contact.name.toUpperCase().match(this.searchedName.toUpperCase())  
          })
-    },
-
+    }
   }
 
 

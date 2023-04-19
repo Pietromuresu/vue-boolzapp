@@ -108,7 +108,7 @@
              class="chat">
           <ul>
             <li
-              v-for="text in contact.messages"
+              v-for="(text, index) in contact.messages"
               :class="text.status">
               {{text.message}}
               <div class="lastMsgHour">
@@ -117,8 +117,10 @@
               <div class="dropdown displayNone">
                 <i class="fa-solid fa-chevron-down"></i>
                 <div class="dropdownMenu displayNone">
-                  <div class="delete dd-Item">
-                    Delete
+                  <div
+                  @click.stop="text.delete = true, removeMsg(text, index, contact.messages)"
+                    class=" dd-Item">
+                    <span>Delete</span>
                   </div>
                   <div class="info dd-Item">
                     Info
