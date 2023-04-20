@@ -27,37 +27,55 @@
 
         <!-- user avatar -->
           <div class="mineCard card displayFlex">
+
             <div class="nameImgContainer displayFlex">
+
               <img src="assets/img/avatar_io.jpg" alt="Your photo">
               <span>Sofia</span>
+
             </div>
+
             <div class="buttons">
+
               <i class="fa-sharp fa-solid fa-circle-notch"></i>
               <i class="fa-solid fa-message"></i>
               <i class="fa-solid fa-ellipsis-vertical"></i>
+
             </div>
+
           </div>
           
           <div class="alertNotification displayFlex">
+
             <div class="bellFont displayFlex">
+
               <i class="fa-solid fa-bell-slash"></i>
+
             </div>
+
             <div class="alertNotificationText">
+
               <p>Ricevi notifiche di nuovi messaggi</p>
               <a class="subText" href="#">Attiva notifiche desktop</a>
+
             </div>
+
           </div>
 
           <div class="searchBar displayFlex">
+
             <i class="fa-solid fa-magnifying-glass"></i>
             <input
               v-model="searchedName"
               type="text"
               placeholder="Cerca o inizia una nuova chat">
+
           </div>
             <!-- Recent chats -->
           <div class="recentChats">
+
             <ul>
+
               <li
                 class="contact displayFlex"
                 v-for="(contact, index) in findSearchedName"
@@ -69,19 +87,30 @@
                 <div class="contactInfo">
 
                   <h4>{{contact.name}}</h4>
-                  <div
-                    
+
+                  <div                   
                     class="lastMsg">
-                    <p class="subText">{{ getLastMsg(contact)}} </p>
+
+                    <p v-if="contact.messages.length > 0" class="subText">{{ getLastMsg(contact)}} </p>
+                    <p v-else class="subText">Inizia una conversazione con {{contact.name}}</p>
+
                   </div>
 
-                  <div class="subText lastMsgHour">
-                   {{ getLastMsgHour(contact)}}
+                  <div  class="subText lastMsgHour">
+                    <span v-if="contact.messages.length > 0">
+                      {{getLastMsgHour(contact)}}</span>
+                    <span v-else>
+                      </span>
+                   
+
                   </div>
 
                 </div>
+
               </li>
+
             </ul>
+
           </div>
       </div>
 <!-- current chat -->
@@ -91,53 +120,79 @@
       class="chatContainer ">
 
         <div class="currentContact displayFlex">
+
             <div class="currentContactInfo displayFlex">
+
               <img :src="contacts[counter].avatar" alt="user image">
               
               <div  class="currentContactName">
+
                 <span>{{contacts[counter].name}}</span>
                 <p class="subText">Ultimo accesso oggi alle 12:00</p>
+
               </div>
 
             </div>
 
             <div class="buttons">
+
               <i class="fa-solid fa-magnifying-glass"></i>
               <i class="fa-solid fa-paperclip"></i>
               <i class="fa-solid fa-ellipsis-vertical"></i>
+
             </div>
+
         </div>
 
         <div 
              class="chat">
+
           <ul>
+
             <li
               v-for="(text, index) in contact.messages"
               :class="text.status">
+
               {{text.message}}
+
               <div class="lastMsgHour">
+
                 {{text.date}}
+
               </div>
               <div class="dropdown displayNone">
+
                 <i class="fa-solid fa-chevron-down"></i>
+
                 <div class="dropdownMenu displayNone">
+
                   <div
                   @click.stop="text.delete = true, removeMsg(text, index, contact.messages)"
                     class=" dd-Item">
+
                     <span>Delete</span>
+
                   </div>
                   <div class="info dd-Item">
+
                     <span>Info</span>
+
                   </div>
+
                 </div>
+
               </div>
+
             </li>
+
           </ul>
+
         </div>
 
         <div class="typingBar displayFlex">
           
             <i class="fa-regular fa-face-smile"></i>
+
             <input
               v-model="newText"
               @keyup.enter="addNewMessage(contact)"

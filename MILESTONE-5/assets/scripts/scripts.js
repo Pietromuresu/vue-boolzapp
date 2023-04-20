@@ -60,7 +60,7 @@ createApp({
     },
 
     getLastMsg(contact){
-      if(contact.messages[contact.messages.length - 1].status == 'received'){
+      if( contact.messages[contact.messages.length - 1].status == 'received'){
         return `${contact.name}: ${contact.messages[contact.messages.length - 1].message}` 
 
       }else {
